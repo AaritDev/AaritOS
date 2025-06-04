@@ -10,3 +10,7 @@ All rights to the original neofetch project belong to its respective owners.
 I am not affiliated with the neofetch project. Please don't sue me 😅 — I'm an 11-year-old indie developer building this for fun and learning.
 
 If you're the author of neofetch and would like me to rename or remove the reference, feel free to open an issue or contact me!
+
+⚠️ This project is a simulated OS written in Python, primarily for educational and entertainment purposes. It does not attempt to replicate or replace any real OS functionality. All trademarks and names belong to their respective owners.
+
+If I accidentally used your name and you want it removed, just let me know. I'm chill. 😄
