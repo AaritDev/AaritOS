@@ -1,0 +1,131 @@
+📘 AARITOS — User Guide & Command Manual (Windows Only)
+
+Welcome to AaritOS, your custom-coded virtual OS shell simulation.
+This project is meant to be fun, educational, and powerful — not a real OS, but it feels like one.
+🧳 What’s in AaritOS_Build.zip?
+
+When you extract the .zip, you’ll get this:
+
+📁 aaritos/
+   └── aaritos_fs/       ← Virtual file system
+📁 _internal/            ← Internal data used by AaritOS.exe
+📄 AaritOS.exe           ← Run this to launch AaritOS
+
+    ✅ Only works on Windows. Do not try this on Linux or macOS — it’s not designed for them.
+
+🚀 How to Start
+
+    Extract the entire zip anywhere on your Windows system.
+
+    Double-click AaritOS.exe. (You must keep _internal/ and aaritos/ folders next to it!)
+
+    On first launch, you’ll:
+
+        Pick a username
+
+        (Optionally) set a password
+
+        Customize your prompt color and symbol
+
+        Choose an editor style (vim or nano)
+
+        Write a welcome message
+
+After setup, you’ll enter the AaritOS shell. Now you're inside the fake terminal.
+💻 Using the Shell
+
+Type help to get a list of all available commands. Here’s a breakdown of what they do:
+📂 File & Directory Commands
+Command	Description
+ls	Lists all files/folders in the current virtual directory
+cd <dir>	Changes directory (cd.. to go up one level)
+pwd	Shows current virtual directory path
+mkdir <dir>	Creates a new folder
+rmdir <dir>	Deletes a folder if it’s empty
+touch <file>	Creates an empty file
+rm <file>	Deletes a file
+cp src dst	Copies a file
+mv src dst	Moves or renames a file
+tree	Shows directory structure recursively
+
+    📁 These commands only affect the aaritos_fs/ folder. They don’t touch your real files.
+
+📝 File Reading & Writing
+Command	Description
+cat <file>	Prints file content
+type <file>	Opens editor (vim or nano style) to write/edit a file
+head <file>	Shows first 10 lines (use -n for custom count)
+tail <file>	Shows last 10 lines (same as above)
+wc <file>	Shows line, word, and character counts
+grep <pattern> <file>	Searches for text inside a file
+🛠️ System-Like Commands
+Command	Description
+clear	Clears the terminal screen
+echo hello	Prints the text you type
+date	Shows the current system date/time
+uptime	(Fake) Shows dummy system uptime
+whoami	Shows your current username
+df	Shows fake disk usage stats
+uname	Displays OS and architecture info
+ps	Simulates running processes
+neofetch	Displays AaritOS logo and system info
+
+    ⚠️ Note: Commands like uptime, df, and ps are fake and for display only. They don't reflect your actual PC stats (yet).
+
+🔒 Security & Settings
+Command	Description
+passwd	Change your login password
+settings	Modify your prompt color, symbol, username, welcome message, and editor
+exit	Shuts down AaritOS with a cool animation
+login	Shown automatically at startup — 3 wrong attempts = lockout
+⚡ Executable Control (Real on Windows)
+Command	Description
+execute <file>	Launches .exe file inside the current virtual directory
+kill <file>	Tries to terminate a running .exe process by name
+
+    ⚠️ This can run and kill real .exe files, so only use it on things you trust and keep in the same folder.
+
+🌍 File Browsing Modes
+Command	Description
+host	Switches to browsing your real Windows filesystem (starts at C:/)
+aaritos	Returns to the fake AaritOS filesystem
+
+    🔐 Use with caution! You can only browse real files, not edit them (yet).
+
+🐣 Easter Eggs
+
+There are 2 hidden Easter egg commands you’ll only discover if you:
+
+    Play around a lot
+
+    Or... 👀 check the source code
+
+They’re harmless but fun.
+🚧 Work in Progress Notes
+
+    Some system commands (uptime, df, ps, etc.) are placeholders — they’re not connected to actual Windows internals.
+
+    Shell history (↑ arrow) and alias, man, or pkg support are not yet implemented.
+
+    Only the .exe file and folders from the AARITOS zip are affected. It’s safe and won’t touch anything outside unless you use host mode.
+
+✅ Final Notes
+
+    Don’t delete or rename _internal/ or aaritos/aaritos_fs/ or it will break.
+
+    Passwords are hashed (SHA-256) and stored in a config file inside the aaritos folder.
+
+    This project is for learning, terminal roleplay, and fun. It is not a real OS or secure shell.
+
+    Want to change or inspect your settings? Check inside:
+
+    aaritos/aaritos_fs/root/config.txt
+    aaritos/aaritos_fs/root/shadow
+
+💬 Having Issues?
+
+    Make sure you're on Windows
+
+    Make sure AaritOS.exe, _internal/, and aaritos/ stay together
+
+    Don’t run the .py file unless you’re editing it
